@@ -1,0 +1,5 @@
+/certificates/
+/application/config/config.php
+/application/config/database.php
+/data 
+/.well-known/

@@ -1,0 +1,477 @@
+/* CSS Document */
+@charset "utf-8";
+/* CSS Document */
+/*-----------------------------------------------------------------------------
+Screen Stylesheet
+version:	1.0
+date:		01/01/2013
+author:		Peter Koopman
+email:		peter@scribbledesign.co.nz
+
+website:	http://www.scribbledesign.co.nz
+
+-----------------------------------------------------------------------------*/
+/* Browser Reset
+----------------------------------------------------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset,img { border: 0; }
+address,caption,cite,code,dfn,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+strong {
+	font-style: normal;
+	font-weight: 800;
+}
+em {
+	font-weight: normal;
+	font-style: italic;
+}
+ol,ul { list-style: none; }
+caption,th { text-align: left; }
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+q:before,
+q:after { content: ''; }
+abbr,acronym { border: 0; }
+a {
+	/* get rid of link outlines in firefox */
+	outline-color: transparent;
+	outline-style: none;
+	outline-width: medium;
+}
+
+/* Clear Floats
+-----------------------------------------------------------------------------------------------*/
+.clear { display: inline-block; }   
+.clear:after { content: "."; display: block; height: 0;   clear: both; visibility: hidden; }
+* html .clear { height: 1%; }
+.clear { display: block; }
+
+
+/* Type
+-----------------------------------------------------------------------------------------------*/
+body {
+	font: 400 100%/1.5 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	color: #000;
+}
+h1,h2,h3,h4,h5,h6 { 
+	font-weight:700;
+}
+h1 { font-size: 28px; }
+h2 { font-size: 22px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+p,q,cite { font-size: 14px; }
+dl,ul {
+	list-style: none;
+	font-size: 14px;
+}
+ol {
+	list-style: decimal;
+	font-size: 14px;
+}
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+/*Forms
+-----------------------------------------------------------------------------*/
+form fieldset{
+	width:48%;
+	margin:0 1%;
+	float:left;	
+}
+form label{
+	clear:left;	
+	float:left;
+	width:120px;
+	margin:5px 0;
+	font-size:14px;
+	color:#228fa4;
+}
+form label.error{
+	width:250px;	
+}
+
+form input, form textarea, form select{
+	float:left;
+	width:180px;
+	height:18px;
+	margin:3px;
+	padding:1px 3px;
+	font-size:14px !important;
+	border-radius:4px;
+	border:1px solid #ddd;
+	background-color:#fafafa;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+form select{
+	width:150px;
+	height:22px;
+}
+form input:hover, form select:hover, form input:focus{
+	border-color:#c5c5c5;
+	background-color:#f6f6f6;
+}
+form textarea{
+	height:100px;
+	width:180px;
+}
+form button{
+	clear:left;
+	float:left;
+}
+form  .submit{
+	font:normal 14px/22px Helvetica, Arial, sans-serif;
+	width:110px;
+	height:22px;
+	float:right;
+	padding:0;
+}
+
+form .cat_check{
+	width:15px;	
+}
+form .cat_filebox{
+	height:22px;
+	width:160px;
+}
+form .preTextBox{
+	width:40px;	
+}
+form .sufTextBox{
+	width:126px;	
+}
+
+
+/* Document & CSS Objects
+-----------------------------------------------------------------------------*/
+body { 
+	text-align: center; 
+	background:no-repeat center top url(/images/pg_bkgd.jpg);
+	background-color:#101112;
+}
+.wrapper {
+	width:100%;
+	max-width: 1200px; /* Set page width here - you can also use percentage */
+	text-align: left;
+	margin: 20px auto;
+	background-color: #fff;
+}
+/* Header
+-----------------------------------------------------------------------------*/
+header{	
+	width:100%;
+	height:131px;
+	background-color:#000;
+}
+header h1{
+	width:50%;
+	float:left;
+	height:131px;	
+}
+.logoutLink{
+	color:#fff;
+	text-decoration:none;
+	float:right;
+	margin:.5em 1em;	
+}
+/* Navigation
+-----------------------------------------------------------------------------*/
+nav{ 
+	background-color:#e3ecf1;
+	padding:0 1em;
+}
+nav li{
+	display:inline;
+}
+nav li a{
+	font:bold 16px/2 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	color:#000; 
+	padding:0 2em;
+	text-transform: uppercase;
+	text-decoration:none;	
+}
+/* Content
+-----------------------------------------------------------------------------*/
+.content{
+	background-color:#e3ecf1;
+	padding:1em 0;
+}
+.content h1,
+.content h2{
+	padding:0 1em;	
+}
+.content button{
+	background-color:#008ea6;
+	color:#fff;	
+	border:none;
+	padding:4px 14px;
+	font-size:14px;
+	margin:0 1.35%;
+}
+.editTable{
+	font-size:14px;
+	width:auto;	
+}
+.hidden{
+	display:none;	
+}
+.spinner{
+	position:absolute;
+	top:50%;
+	left:50%;
+	display:none;
+}	
+
+
+/*Login
+----------------------------------------------------------------------------*/
+#frmLogin{
+	padding:1em;
+	width:400px;
+}
+
+
+/* Admin Search
+-----------------------------------------------------------------------------*/
+button.addCustomer{
+	margin:1em 2em;
+	display:block;	
+}
+#custSearch{
+	width:180px;
+	height:18px;
+	display:block;
+	margin:2em;
+	padding:1px 3px;
+	border-radius:4px;
+	border:1px solid #ddd;
+	background-color:#fafafa;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+.customerAdd button{
+	margin:2em;	
+}
+.searchResults{
+	padding:0 2em;	
+}
+.searchResults li a{
+	color:#444;
+	text-decoration:none;
+	font-size:18px;
+}
+.searchResults li a:hover{
+	color:#03C;
+	text-decoration:underline;
+}
+
+/*Admin Customer
+-------------------------------------------------------------------------------*/
+#accordion div{
+	padding:1em 1.33%;	
+	max-height:600px;
+}
+#accordion .assetTableWrapper{
+	width:97.34%;
+	overflow-x:scroll;
+	max-height:478px;	
+}
+#deleteCustomer{
+	float:right;
+	margin:10px 1.33%;	
+}
+.custAssetList,
+.custLocations,
+.custUsers{
+	background-color:#fff;		
+}
+.retestDate{
+	width:167px;	
+}
+.custDetails .cat_check{
+	height:24px;	
+}
+.editTable{
+	font-size:14px;
+	width:auto;	
+}
+.editTable thead tr{
+	border:1px solid #999;
+	color:#fff;	
+}
+
+.editTable tbody{
+	border-right:1px solid #999;	
+}
+.editTable th{
+	vertical-align:top;
+	text-align:center;
+	font-weight:bold;
+	padding:3px 5px;
+	font-size:14px;
+	line-height:1.3;
+	color:#999;
+}
+/*.editTable tr:nth-child(even){
+	background-color:#e3ecf1;
+}
+*/.editTable tr.cur{
+	background-color:#4dff4d;
+}
+.editTable tr.exp{
+	background-color:#ff4d4d;
+}
+.editTable input{
+	background-color:transparent;	
+}
+.editTable td{
+	vertical-align:top;
+	text-align:center;
+	padding:4px 0 0 0;	
+	border-left:1px solid #999;	
+	border-bottom:1px solid #999;	
+	min-width:80px;
+}
+.editTable .button{
+	min-width:30px;
+	padding:3px;	
+}
+.editTable td select{
+	width:100%;	
+	margin:0;
+	border:none;
+	height:25px;
+	background:none;
+}
+.editTable td input{
+	width:100%;
+	height:25px;	
+	margin:0;
+	border:none;
+	text-align:center;
+}
+.editTable td p{
+	font-size:14px;	
+	line-height:25px;
+}
+#inspectionDialog{
+	display:none;	
+}
+.assetFilter{
+	margin:0 0.1%;	
+}
+
+/*Inspection Page
+-----------------------------------------------------------------------------*/
+#inspectionForm{
+	padding:0 1%;	
+}
+.ui-datepicker{
+	width:13em;	
+}
+.ui-datepicker .ui-datepicker-header{
+	font-size:.9em;	
+}
+.ui-datepicker table{
+	font-size:.65em;	
+}
+.questions label{
+	width:170px;	
+}
+.printCertificate{
+	padding:2em 0;	
+}
+
+
+/*Options Page
+-----------------------------------------------------------------------------*/
+.optionsAttributes{
+	width:22.3%;
+	float:left;
+}
+.optionsAttributes ul li,
+.optionsQuestions ul li{
+	margin: 0 3px 3px 3px; 
+	padding: 0.4em; 
+	padding-left: 1.5em; 
+	height: 18px; 
+}
+.optionsAttributes .sortable-delete,
+.optionsQuestions .sortable-delete{
+	height:25px;
+	width: 100%;
+	margin-left: 2em;
+	background:no-repeat 0 50% url(/images/delete-icon.png);
+	overflow:hidden;
+}
+.optionsAttributes .sortable-delete li,
+.optionsQuestions .sortable-delete li { 
+    height: 0; 
+    width: 0; 
+    overflow: hidden; 
+}
+.optionsQuestions .addNewQuestion{
+	width:40%;	
+}
+ul.sortable { 
+    padding-bottom: 5px; 
+}
+ul.sortable li {  
+    cursor: pointer; 
+}
+
+/*Tests Due Page
+-----------------------------------------------------------------------------*/
+.testsDueList{
+	width:35%;
+	margin:1em 2.8%;	
+}
+.testsDueList li{
+	margin:.5em 0;
+}
+.testsDueList .ui-state-default a{
+	padding:.5em 3.5%;
+	display:block;
+	color:#222;
+	font-size:16px;	
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+footer { 
+
+}
+/*Clearers
+------------------------------------------------------------------------------*/
+
+.clear:after {
+	display: block;
+	content: ".";
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+@media (max-width: 768px){
+	.testsDueList{
+		width:94.4%;	
+	}
+
+}
+

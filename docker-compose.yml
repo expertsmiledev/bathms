@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: scribbledesign/bathms
+    ports:
+      - "8000:80"
+    volumes:
+      - "./:/var/www/html"
+    container_name: bathms_app
+    restart: unless-stopped
+
+  db: 
+    image: mariadb:10.1.43
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bathms_db
+    container_name: bathms_db
+    volumes: 
+      - ./data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+     - PMA_HOST=db
+     - UPLOAD_LIMIT=128M
+    restart: always
+    ports:
+     - 8081:80
+
+volumes:
+  app:
+  data:
+    driver: local
